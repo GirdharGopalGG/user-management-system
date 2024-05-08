@@ -56,6 +56,7 @@ public class UserServiceImpl implements UserService{
     dto.setEmailId(user.getEmailId());
     dto.setUsername(user.getUsername());
     dto.setName(user.getName());
+    dto .setUserRole(user.getUserRole());
     return dto;
 }
 
@@ -65,6 +66,7 @@ AppUser mapToEntity(UserDto dto){
     user.setName(dto.getName());
     user.setUsername(dto.getUsername());
     user.setEmailId(dto.getEmailId());
+    user.setUserRole(dto.getUserRole());
     user.setPassword(BCrypt.hashpw(dto.getPassword(),BCrypt.gensalt(10)) );
     return user;
 }

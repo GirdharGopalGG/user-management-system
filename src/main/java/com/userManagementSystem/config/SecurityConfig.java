@@ -23,9 +23,12 @@ public class SecurityConfig {
         httpSecurity.addFilterBefore(jwtRequestFilter, AuthorizationFilter.class);
 
         httpSecurity.authorizeHttpRequests()
-                .requestMatchers("/api/v1/auth/login","/api/v1/auth/addUser")
-                .permitAll()
-                .anyRequest().authenticated();
+                .anyRequest().permitAll();
+//                .requestMatchers("/api/v1/auth/login","/api/v1/auth/addUser")
+//                .permitAll()
+//                .requestMatchers("/api/v1/countries/addCountry").hasRole("ADMIN")
+//                .requestMatchers(("/api/v1/auth/profile")).hasAnyRole("ADMIN","USER")
+//                .anyRequest().authenticated();
 
         return httpSecurity.build();
 

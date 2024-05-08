@@ -42,8 +42,7 @@ public class AuthController {
 
     @GetMapping("/profile")
     public AppUser getCurrentProfile(@AuthenticationPrincipal AppUser user){
-
-        return user;
+    return user;
     }
 }
 
