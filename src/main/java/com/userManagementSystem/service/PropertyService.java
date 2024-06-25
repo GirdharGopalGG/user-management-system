@@ -1,7 +1,8 @@
 package com.userManagementSystem.service;
 
+import com.userManagementSystem.entity.Property;
 import com.userManagementSystem.payload.PropertyDto;
 
 public interface PropertyService {
-    PropertyDto addProperty(PropertyDto propertyDto);
+    Property addProperty(Property property);
 }

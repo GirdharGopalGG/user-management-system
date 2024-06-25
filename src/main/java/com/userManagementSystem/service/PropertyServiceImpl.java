@@ -4,6 +4,7 @@ import com.userManagementSystem.entity.Property;
 import com.userManagementSystem.payload.PropertyDto;
 import com.userManagementSystem.repository.PropertyRepository;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.RequestBody;
 
 @Service
 public class PropertyServiceImpl implements PropertyService {
@@ -14,11 +15,9 @@ public class PropertyServiceImpl implements PropertyService {
     }
 
     @Override
-    public PropertyDto addProperty(PropertyDto propertyDto) {
-        Property property = mapToEntity(propertyDto);
+    public Property addProperty( Property property) {
         Property save = propertyRepository.save(property);
-        PropertyDto propertyDto1 = mapToDto(save);
-        return propertyDto1;
+        return save;
 
     }
 

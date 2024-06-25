@@ -6,8 +6,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class UmsApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(UmsApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(UmsApplication.class, args);
+    }
 
 }
